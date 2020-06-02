@@ -1,5 +1,7 @@
+language: java
 sudo: false
 install: false
+jdk: oraclejdk8
 script:
   # JaCoCo is used to have code coverage, "-Pcoverage" activates the maven profile in the pom.xml
-  - ./gradlew build 
+  - ./gradlew build --scan -s
